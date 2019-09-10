@@ -721,7 +721,8 @@
       <mass value="0.08057"/>      
       <!-- reference: generic rotational inertial tensor of cylindrical shapes -->
       <!-- specific inertial reference frame is kept the same as the link reference frame -->
-      <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/>
+      <inertia ixx="1.343e-06" ixy="0" ixz="0" iyy="1.343e-06" iyz="0" izz="1.343e-06"/>
+      <!-- <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/> -->
       <!-- inertial matrix from NAO fsr sensors: -->
       <!-- <inertia ixx="1.1e-09" ixy="0" ixz="0" iyy="1.1e-09" iyz="0" izz="1.1e-09"/> -->
     </inertial>
@@ -729,60 +730,73 @@
     <!-- joint origin is the point of contact on the foot sole -->
     <!-- need to rotate and displace cylinder to place it within the foot -->
     <visual>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/> -->
       <geometry>
         <!-- webots model uses a boundingBox around the sensor -->
-        <!-- <box size="0.01 0.01 0.012"/> -->
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </visual>
     <!-- <collision> properties to define how it interacts with other objects -->
     <!-- should not be necessary as the sensor is inside the foot -->
     <!-- as long as mass is correctly defined, shape should only influence sensor readings -->
     <collision>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/> -->
       <geometry>
         <!-- reference: darwin webots proto file (.vrml) 'bounding box' field -->
         <!-- despite webots using a cube to model the sensor, its shape is circular/cylinder -->
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </collision>
   </link>
 
   <link name="Left_FSR_FR_frame">
     <inertial>
-      <mass value="0.08057"/>      
-      <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/>
+      <mass value="0.08057"/>
+      <inertia ixx="1.343e-06" ixy="0" ixz="0" iyy="1.343e-06" iyz="0" izz="1.343e-06"/>
+      <!-- <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/> -->
     </inertial>
     <visual>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </visual>
     <collision>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </collision>
   </link>
 
   <link name="Left_FSR_BL_frame">
     <inertial>
-      <mass value="0.08057"/>      
-      <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/>
+      <mass value="0.08057"/>     
+      <inertia ixx="1.343e-06" ixy="0" ixz="0" iyy="1.343e-06" iyz="0" izz="1.343e-06"/>
+      <!-- <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/> -->
     </inertial>
     <visual>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </visual>
     <collision>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </collision>
   </link>
@@ -790,18 +804,23 @@
   <link name="Left_FSR_BR_frame">
     <inertial>
       <mass value="0.08057"/>      
-      <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/>
+      <inertia ixx="1.343e-06" ixy="0" ixz="0" iyy="1.343e-06" iyz="0" izz="1.343e-06"/>
+      <!-- <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/> -->
     </inertial>
     <visual>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </visual>
     <collision>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </collision>
   </link>
@@ -811,19 +830,24 @@
   <!-- note: x axis (vertical) is inverted on the right leg -->
   <link name="Right_FSR_FL_frame">
     <inertial>
-      <mass value="0.08057"/>      
-      <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/>
+      <mass value="0.08057"/>
+      <inertia ixx="1.343e-06" ixy="0" ixz="0" iyy="1.343e-06" iyz="0" izz="1.343e-06"/>
+      <!-- <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/> -->
     </inertial>
     <visual>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="-0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </visual>
     <collision>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="-0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </collision>
   </link>
@@ -831,18 +855,23 @@
   <link name="Right_FSR_FR_frame">
     <inertial>
       <mass value="0.08057"/>      
-      <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/>
+      <inertia ixx="1.343e-06" ixy="0" ixz="0" iyy="1.343e-06" iyz="0" izz="1.343e-06"/>
+      <!-- <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/> -->
     </inertial>
     <visual>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="-0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </visual>
     <collision>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="-0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </collision>
   </link>
@@ -850,18 +879,23 @@
   <link name="Right_FSR_BL_frame">
     <inertial>
       <mass value="0.08057"/>      
-      <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/>
+      <inertia ixx="1.343e-06" ixy="0" ixz="0" iyy="1.343e-06" iyz="0" izz="1.343e-06"/>
+      <!-- <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/> -->
     </inertial>
     <visual>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="-0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </visual>
     <collision>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="-0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </collision>
   </link>
@@ -869,18 +903,23 @@
   <link name="Right_FSR_BR_frame">
     <inertial>
       <mass value="0.08057"/>      
-      <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/>
+      <inertia ixx="1.343e-06" ixy="0" ixz="0" iyy="1.343e-06" iyz="0" izz="1.343e-06"/>
+      <!-- <inertia ixx="0.671e-06" ixy="0" ixz="0" iyy="0.671e-06" iyz="0" izz="1.007e-06"/> -->
     </inertial>
     <visual>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="-0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </visual>
     <collision>
-      <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/>
+      <origin rpy="0 0 0"  xyz="-0.005 0 0"/>
+      <!-- <origin rpy="3.141592654 1.570796327 0"  xyz="-0.0025 0 0"/> -->
       <geometry>
-        <cylinder radius="0.005" length="0.005" />
+        <box size="0.01 0.01 0.01"/>
+        <!-- <cylinder radius="0.005" length="0.005" /> -->
       </geometry>
     </collision>
   </link>
@@ -1590,29 +1629,29 @@
   <!-- ################################################################################ -->
   <!-- FSR/Bumper sensor simulation info  (EXPERIMENTAL) -->
   <!-- NOTE: URDF -> SDF conversion has a bug when naming collisions, manual conversion to .sdf is required -->
+  <!-- parameter reference: nao FSR sensor field [cf. 'naoGazebo.xacro'] -->
+
 
   <!-- ######## -->
   <!-- Left leg -->
   <gazebo reference="Left_FSR_FL_frame">
-    <!-- reference: nao FSR sensor field [cf. 'naoGazebo.xacro'] -->
-   <!--  <mu1>0.5</mu1>
+    <mu1>0.5</mu1>
     <mu2>0.5</mu2>
     <selfCollide>false</selfCollide>
     <turnGravityOff>false</turnGravityOff>
     <fdir1>1 0 0</fdir1>
     <maxVel>0.1</maxVel>
-    <minDepth>0.003</minDepth> -->
+    <minDepth>0.003</minDepth>
     <material>Gazebo/Red</material>
     <sensor name="Left_FSR_FL" type="contact">
+      <always_on>true</always_on>
+      <update_rate>20</update_rate>
+      <visualize>true</visualize>
       <contact>
         <collision>MP_ANKLE2_L_fixed_joint_lump__Left_FSR_FL_frame_collision_3</collision>
       </contact>
-      <!-- <always_on>1</always_on> -->
-      <update_rate>5</update_rate>
-      <!-- <visualize>true</visualize> -->
       <plugin filename="libgazebo_ros_bumper.so" name="gazebo_darwin_Left_FSR_FL">
-        <robotNamespace>darwin_sensor</robotNamespace>
-        <update_rate>20</update_rate>
+        <robotNamespace>darwin</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <bumperTopicName>FSR/left_fsr_FL</bumperTopicName>
         <frameName>Left_FSR_FL_frame</frameName>
@@ -1630,14 +1669,14 @@
     <minDepth>0.003</minDepth>
     <material>Gazebo/Red</material>
     <sensor name="Left_FSR_FR" type="contact">
-      <always_on>1</always_on>
+      <always_on>true</always_on>
       <update_rate>20</update_rate>
       <visualize>true</visualize>
       <contact>
         <collision>MP_ANKLE2_L_fixed_joint_lump__Left_FSR_FR_frame_collision_4</collision>
       </contact>
       <plugin filename="libgazebo_ros_bumper.so" name="gazebo_darwin_Left_FSR_FR">
-        <robotNamespace>darwin_sensor</robotNamespace>
+        <robotNamespace>darwin</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <bumperTopicName>FSR/left_fsr_FR</bumperTopicName>
         <frameName>Left_FSR_FR_frame</frameName>
@@ -1655,14 +1694,14 @@
     <minDepth>0.003</minDepth>
     <material>Gazebo/Red</material>
     <sensor name="Left_FSR_BL" type="contact">
-      <always_on>1</always_on>
+      <always_on>true</always_on>
       <update_rate>20</update_rate>
       <visualize>true</visualize>
       <contact>
         <collision>MP_ANKLE2_L_fixed_joint_lump__Left_FSR_BL_frame_collision_1</collision>
       </contact>
       <plugin filename="libgazebo_ros_bumper.so" name="gazebo_darwin_Left_FSR_BL">
-        <robotNamespace>darwin_sensor</robotNamespace>
+        <robotNamespace>darwin</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <bumperTopicName>FSR/left_fsr_BL</bumperTopicName>
         <frameName>Left_FSR_BL_frame</frameName>
@@ -1680,14 +1719,14 @@
     <minDepth>0.003</minDepth>
     <material>Gazebo/Red</material>
     <sensor name="Left_FSR_BR" type="contact">
-      <always_on>1</always_on>
+      <always_on>true</always_on>
       <update_rate>20</update_rate>
       <visualize>true</visualize>
       <contact>
         <collision>MP_ANKLE2_L_fixed_joint_lump__Left_FSR_BR_frame_collision_2</collision>
       </contact>
       <plugin filename="libgazebo_ros_bumper.so" name="gazebo_darwin_Left_FSR_BR">
-        <robotNamespace>darwin_sensor</robotNamespace>
+        <robotNamespace>darwin</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <bumperTopicName>FSR/left_fsr_BR</bumperTopicName>
         <frameName>Left_FSR_BR_frame</frameName>
@@ -1707,14 +1746,14 @@
     <minDepth>0.003</minDepth>
     <material>Gazebo/Red</material>
     <sensor name="Right_FSR_FL" type="contact">
-      <always_on>1</always_on>
+      <always_on>true</always_on>
       <update_rate>20</update_rate>
       <visualize>true</visualize>
       <contact>
         <collision>MP_ANKLE2_R_fixed_joint_lump__Right_FSR_FL_frame_collision_3</collision>
       </contact>
       <plugin filename="libgazebo_ros_bumper.so" name="gazebo_darwin_Right_FSR_FL">
-        <robotNamespace>darwin_sensor</robotNamespace>
+        <robotNamespace>darwin</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <bumperTopicName>FSR/right_fsr_FL</bumperTopicName>
         <frameName>Right_FSR_FL_frame</frameName>
@@ -1732,14 +1771,14 @@
     <minDepth>0.003</minDepth>
     <material>Gazebo/Red</material>
     <sensor name="Right_FSR_FR" type="contact">
-      <always_on>1</always_on>
+      <always_on>true</always_on>
       <update_rate>20</update_rate>
       <visualize>true</visualize>
       <contact>
         <collision>MP_ANKLE2_R_fixed_joint_lump__Right_FSR_FR_frame_collision_4</collision>
       </contact>
       <plugin filename="libgazebo_ros_bumper.so" name="gazebo_darwin_Right_FSR_FR">
-        <robotNamespace>darwin_sensor</robotNamespace>
+        <robotNamespace>darwin</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <bumperTopicName>FSR/right_fsr_FR</bumperTopicName>
         <frameName>Right_FSR_FR_frame</frameName>
@@ -1757,14 +1796,14 @@
     <minDepth>0.003</minDepth>
     <material>Gazebo/Red</material>
     <sensor name="Right_FSR_BL" type="contact">
-      <always_on>1</always_on>
+      <always_on>true</always_on>
       <update_rate>20</update_rate>
       <visualize>true</visualize>
       <contact>
         <collision>MP_ANKLE2_R_fixed_joint_lump__Right_FSR_BL_frame_collision_1</collision>
       </contact>
       <plugin filename="libgazebo_ros_bumper.so" name="gazebo_darwin_Right_FSR_BL">
-        <robotNamespace>darwin_sensor</robotNamespace>
+        <robotNamespace>darwin</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <bumperTopicName>FSR/right_fsr_BL</bumperTopicName>
         <frameName>Right_FSR_BL_frame</frameName>
@@ -1782,14 +1821,14 @@
     <minDepth>0.003</minDepth>
     <material>Gazebo/Red</material>
     <sensor name="Right_FSR_BR" type="contact">
-      <always_on>1</always_on>
+      <always_on>true</always_on>
       <update_rate>20</update_rate>
       <visualize>true</visualize>
       <contact>
         <collision>MP_ANKLE2_R_fixed_joint_lump__Right_FSR_BR_frame_collision_2</collision>
       </contact>
       <plugin filename="libgazebo_ros_bumper.so" name="gazebo_darwin_Right_FSR_BR">
-        <robotNamespace>darwin_sensor</robotNamespace>
+        <robotNamespace>darwin</robotNamespace>
         <alwaysOn>true</alwaysOn>
         <bumperTopicName>FSR/right_fsr_BR</bumperTopicName>
         <frameName>Right_FSR_BR_frame</frameName>
@@ -1841,7 +1880,9 @@
     </sensor>
   </gazebo>
 
-  <gazebo>
+
+  <!-- default darwin imu interface uses hector plugin (????) -->
+<!--   <gazebo>
     <plugin filename="libhector_gazebo_ros_imu.so" name="gazebo_ros_imu">
       <bodyName>MP_BODY</bodyName>
       <updateRate>50</updateRate>
@@ -1851,5 +1892,28 @@
       <xyzOffset>0 0 0</xyzOffset>
       <rpyOffset>0 0 -0.703220730592</rpyOffset>
     </plugin>
+  </gazebo> -->
+
+  <!-- IMU interface taken from darwin -->
+  <!-- ROS Imu Sensor -->
+  <!-- Measurements are computed by the ROS plugin, not by Gazebo -->
+  <gazebo>
+    <plugin name="gazebo_ros_imu_controller" filename="libgazebo_ros_imu.so">
+        <robotNamespace>/darwin</robotNamespace>
+        <topicName>imu</topicName>
+        <bodyName>MP_BODY</bodyName>
+        <updateRate>50</updateRate>
+        <!-- added gaussian noise similar to nao robot -->
+        <gaussianNoise>2.89e-08</gaussianNoise>
+  <!--       <accelGaussianNoise>2.89e-08 2.89e-08 2.89e-08</accelGaussianNoise>
+        <rateGaussianNoise>2.89e-08 2.89e-08 2.89e-08</rateGaussianNoise>
+        <headingGaussianNoise>2.89e-08 2.89e-08 2.89e-08</headingGaussianNoise> -->
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 -0.703220730592</rpyOffset>
+        <alwaysOn>true</alwaysOn>
+    </plugin>
   </gazebo>
+
+
+
 </robot>
