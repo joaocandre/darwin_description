@@ -1914,7 +1914,7 @@
         <robotNamespace>/darwin</robotNamespace>
         <topicName>imu</topicName>
         <bodyName>MP_BODY</bodyName>
-        <updateRate>50</updateRate>
+        <updateRate>0</updateRate>
         <!-- added gaussian noise similar to nao robot -->
         <gaussianNoise>2.89e-08</gaussianNoise>
   <!--       <accelGaussianNoise>2.89e-08 2.89e-08 2.89e-08</accelGaussianNoise>
