@@ -1125,13 +1125,14 @@
     <axis xyz="0 0 1"/>
     <limit effort="2.8" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
   </joint>
-
+################################################
   <joint name="j_pelvis_l" type="revolute">
     <parent link="MP_BODY"/>
     <child link="MP_PELVIS_L"/>
     <origin rpy="0 3.14159 -1.5707963" xyz="-0.005 0.037 -0.09355"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-0.7853981634" upper="2.617993878" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_thigh1_l" type="revolute">
@@ -1139,7 +1140,8 @@
     <child link="MP_THIGH1_L"/>
     <origin rpy="1.5707963 0 0" xyz="0 0 0.028652"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-1.047197551" upper="0.0000" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_thigh2_l" type="revolute">
@@ -1147,7 +1149,8 @@
     <child link="MP_THIGH2_L"/>
     <origin rpy="1.5707963 0 -1.5707963" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-0.5235987756" upper="1.745329252" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_tibia_l" type="revolute">
@@ -1155,7 +1158,8 @@
     <child link="MP_TIBIA_L"/>
     <origin rpy="0 0 0" xyz="-0.093 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-2.2689280276" upper="0.0000" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_ankle1_l" type="revolute">
@@ -1163,7 +1167,8 @@
     <child link="MP_ANKLE1_L"/>
     <origin rpy="3.14159 0 0" xyz="-0.093 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-1.047197551" upper="1.047197551" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_ankle2_l" type="revolute">
@@ -1171,15 +1176,17 @@
     <child link="MP_ANKLE2_L"/>
     <origin rpy="-1.5707963 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-0.5235987756" upper="1.047197551" velocity="5.6548668"/>
   </joint>
-
+################################################
   <joint name="j_pelvis_r" type="revolute">
     <parent link="MP_BODY"/>
     <child link="MP_PELVIS_R"/>
     <origin rpy="0 3.14159 1.5707963" xyz="-0.005 -0.037 -0.09355"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-2.617993878" upper="0.7853981634" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_thigh1_r" type="revolute">
@@ -1187,7 +1194,8 @@
     <child link="MP_THIGH1_R"/>
     <origin rpy="-1.5707963 0 0" xyz="0 0 0.028652"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="0.0000" upper="1.047197551" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_thigh2_r" type="revolute">
@@ -1195,7 +1203,8 @@
     <child link="MP_THIGH2_R"/>
     <origin rpy="1.5707963 0 -1.5707963" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-1.745329252" upper="0.5235987756" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_tibia_r" type="revolute">
@@ -1203,7 +1212,8 @@
     <child link="MP_TIBIA_R"/>
     <origin rpy="0 0 0" xyz="0.093 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="0.0000" upper="2.2689280276" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_ankle1_r" type="revolute">
@@ -1211,7 +1221,8 @@
     <child link="MP_ANKLE1_R"/>
     <origin rpy="3.14159 0 0" xyz="0.093 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-1.047197551" upper="1.047197551" velocity="5.6548668"/>
   </joint>
 
   <joint name="j_ankle2_r" type="revolute">
@@ -1219,7 +1230,8 @@
     <child link="MP_ANKLE2_R"/>
     <origin rpy="-1.5707963 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/>
+    <!-- <limit effort="10" lower="-2.6179939" upper="2.6179939" velocity="5.6548668"/> -->
+    <limit effort="10" lower="-0.5235987756" upper="1.047197551" velocity="5.6548668"/>
   </joint>
 
   <!-- ######################################################################### -->
