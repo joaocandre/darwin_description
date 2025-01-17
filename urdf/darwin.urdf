@@ -1865,7 +1865,7 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 
-  <gazebo reference="MP_HEAD">
+<!--   <gazebo reference="MP_HEAD">
     <sensor name="camera" type="camera">
       <pose>-0.050000 -0.010000 0.000000 -1.5708 0.000000 -3.141592</pose>
       <camera name="__default__">
@@ -1881,7 +1881,6 @@
       </camera>
       <always_on>1</always_on>
       <update_rate>30.000000</update_rate>
-      <visualize>1</visualize>
       <plugin filename="libgazebo_ros_camera.so" name="camera_controller">
         <alwaysOn>true</alwaysOn>
         <updateRate>30</updateRate>
@@ -1898,7 +1897,7 @@
       </plugin>
     </sensor>
   </gazebo>
-
+ -->
 
   <!-- default darwin imu interface uses hector plugin (????) -->
 <!--   <gazebo>
